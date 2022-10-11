@@ -152,18 +152,6 @@ PING 10.3.1.12 (10.3.1.12) 56(84) bytes of data.
 4 packets transmitted, 4 received, 0% packet loss, time 3062ms
 rtt min/avg/max/mdev = 0.222/0.266/0.310/0.034 ms
 ```
-de trame
-- vm 2  : ```
-PING 10.3.1.11 (10.3.1.11) 56(84) bytes of data.
-64 bytes from 10.3.1.11: icmp_seq=1 ttl=64 time=0.371 ms
-64 bytes from 10.3.1.11: icmp_seq=2 ttl=64 time=0.261 ms
-64 bytes from 10.3.1.11: icmp_seq=3 ttl=64 time=0.332 ms
-64 bytes from 10.3.1.11: icmp_seq=4 ttl=64 time=0.328 ms
-^C
---- 10.3.1.11 ping statistics ---
-4 packets transmitted, 4 received, 0% packet loss, time 3062ms
-rtt min/avg/max/mdev = 0.261/0.323/0.371/0.039 ms
-```
 - vm 2  : ```
 PING 10.3.1.11 (10.3.1.11) 56(84) bytes of data.
 64 bytes from 10.3.1.11: icmp_seq=1 ttl=64 time=0.371 ms
