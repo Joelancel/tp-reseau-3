@@ -176,3 +176,4 @@ PING 10.3.1.11 (10.3.1.11) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.261/0.323/0.371/0.039 ms
 ```
 
+## II. Routage
