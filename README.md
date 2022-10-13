@@ -165,14 +165,15 @@ rtt min/avg/max/mdev = 0.261/0.323/0.371/0.039 ms
 
 ## II. Routage
 🌞**Activer le routage sur le noeud `router`**
-John : `sudo ip add default via 10.3.1.254 dev enp0s8 sudo ip route add 10.3.2.0/24 via 10.3.1.254`
+John : `sudo ip add default via 10.3.1.254 dev enp0s8 `
 
 Marcel :
  ```sudo ip route add default via 10.3.2.254 
-sudo ip route add 10.3.1.0/24 via 10.3.2.254 dev enp0s8
 ```
 🌞Ajouter les routes statiques nécessaires pour que john et marcel puissent se ping
-John : 
+
+John : sudo ip route add 10.3.2.0/24 via 10.3.1.254
+ping 10.3.2.12
 ```
 PING 10.3.2.12 (10.3.2.12) 56(84) bytes of data.
 64 bytes from 10.3.2.12: icmp_seq=1 ttl=63 time=0.421 ms
@@ -188,7 +189,8 @@ PING 10.3.2.12 (10.3.2.12) 56(84) bytes of data.
 8 packets transmitted, 8 received, 0% packet loss, time 7092ms
 rtt min/avg/max/mdev = 0.421/0.625/0.743/0.104 ms
 ```
-Marcel : 
+Marcel : sudo ip route add 10.3.1.0/24 via 10.3.2.254 dev enp0s8
+ping 10.3.1.11
 ```
 PING 10.3.1.11 (10.3.1.11) 56(84) bytes of data.
 64 bytes from 10.3.1.11: icmp_seq=1 ttl=63 time=0.534 ms
