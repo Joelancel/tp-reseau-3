@@ -171,3 +171,33 @@ Marcel :
  ```sudo ip route add default via 10.3.2.254 
 sudo ip route add 10.3.1.0/24 via 10.3.2.254 dev enp0s8
 ```
+🌞Ajouter les routes statiques nécessaires pour que john et marcel puissent se ping
+John : 
+```
+PING 10.3.2.12 (10.3.2.12) 56(84) bytes of data.
+64 bytes from 10.3.2.12: icmp_seq=1 ttl=63 time=0.421 ms
+64 bytes from 10.3.2.12: icmp_seq=2 ttl=63 time=0.593 ms
+64 bytes from 10.3.2.12: icmp_seq=3 ttl=63 time=0.566 ms
+64 bytes from 10.3.2.12: icmp_seq=4 ttl=63 time=0.716 ms
+64 bytes from 10.3.2.12: icmp_seq=5 ttl=63 time=0.700 ms
+64 bytes from 10.3.2.12: icmp_seq=6 ttl=63 time=0.553 ms
+64 bytes from 10.3.2.12: icmp_seq=7 ttl=63 time=0.715 ms
+64 bytes from 10.3.2.12: icmp_seq=8 ttl=63 time=0.743 ms
+^C
+--- 10.3.2.12 ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7092ms
+rtt min/avg/max/mdev = 0.421/0.625/0.743/0.104 ms
+```
+Marcel : 
+```
+PING 10.3.1.11 (10.3.1.11) 56(84) bytes of data.
+64 bytes from 10.3.1.11: icmp_seq=1 ttl=63 time=0.534 ms
+64 bytes from 10.3.1.11: icmp_seq=2 ttl=63 time=0.581 ms
+64 bytes from 10.3.1.11: icmp_seq=3 ttl=63 time=0.548 ms
+64 bytes from 10.3.1.11: icmp_seq=4 ttl=63 time=0.552 ms
+64 bytes from 10.3.1.11: icmp_seq=5 ttl=63 time=0.660 ms
+^C
+--- 10.3.1.11 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4083ms
+rtt min/avg/max/mdev = 0.534/0.575/0.660/0.045 ms
+```
