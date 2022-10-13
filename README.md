@@ -169,7 +169,7 @@ John : ```
 sudo ip add default via 10.3.1.254 dev enp0s8
 sudo ip route add 10.3.2.0/24 via 10.3.1.254 
 ```
-```
-Marcel : sudo ip route add default via 10.3.2.254 
+Marcel :
+ ```sudo ip route add default via 10.3.2.254 
 sudo ip route add 10.3.1.0/24 via 10.3.2.254 dev enp0s8
 ```
